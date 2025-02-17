@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    background-image: url(images/Wave.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center; 
+}
+
+/* == Header == */
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navbar {
+    width: 1000px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 40px;
+    color: white;
+}
+
+.github {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.github:hover {
+    background-color: #1e90a0;
+}
+
+/* == Form == */
+.SearchForm {
+    height: 310px;
+    width: 1000px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 7px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    gap: 50px;
+    margin: auto;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+/* == Search == */
+.SearchBox {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.SearchHeader{
+    font-size: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.SearchIng{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.SearchInput {
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.SearchInput::placeholder {
+    color: rgb(0,0,0,0.5);
+}
+
+/* == Suggestions == */
+.IngSuggestion {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    list-style-type: none;
+    /* == Dropdown == */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.IngredientDropDown {
+    padding: 10px 15px;
+    font-size: 20px;
+    border-bottom: 1px solid #eee;
+    color: #26a8c7;
+    cursor: pointer;
+}
+
+.IngredientDropDown:last-child {
+    border-bottom: none;
+}
+
+.IngredientDropDown:hover {
+    background-color: #f0f8ff;
+}
+
+/* == Ingredients == */
+.IngredientsBox {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.IngredientsHeader {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.YourIngredients {
+    gap: 10px;
+    height: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.NoIng{
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    color: rgb(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Ingredient {
+    height: 40px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 20px;
+    background-color: #26a8c7;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Ingredient:hover {
+    background-color: red;
+}
+
+/* == Button == */
+.SearchBtn {
+    margin-top: 20px;
+    padding: 5px;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: #26a8c7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.SearchBtn:hover {
+    background-color: #1e90a0;
+}
+
+/* == Responsive Design == */
+@media screen and (max-width: 1050px) {
+    .SearchForm , .navbar{
+        width: 95%;
+    }
+
+    .SearchForm{
+        height: 330px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .navbar {
+        flex-direction: column;
+    }
+    
+    .SearchForm{
+        height: 400px;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .SearchBox , .IngredientsBox{
+        width: 100%;
+    }
+
+    .IngredientsBox{
+        margin-top: auto;
+    }
+
+    .YourIngredients {
+        max-height: 40px;
+    }
+
+    .IngredientDropDown {
+        padding: 5px;
+    }
+
+}
+

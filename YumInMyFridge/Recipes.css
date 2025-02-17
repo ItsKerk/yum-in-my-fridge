@@ -1,0 +1,145 @@
+/* == AllRecipes == */
+.AllRecipes{
+    width: 1000px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    gap: 30px;
+    border-radius: 7px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    visibility: hidden;
+}
+
+/* == Recipe == */
+.Recipe{
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}                                              
+
+.Recipe:hover{
+    transform: scale(1.02);
+}
+
+/* == Recipe Image == */
+.RecipeImg{
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* == Recipe Details == */
+.RecipeDetails{
+    max-height: 211px;
+    width: 610px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+}
+
+/* == Recipe Header == */
+.RecipeHeader {
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 25px;
+    margin-bottom: 20px; 
+}
+
+/* == Ingredients Section == */
+.IngSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.UsedIng{
+    color: #1e8566;
+}
+
+.UsedIng .Ing{
+    background-color: #1e8566;
+}
+                                                                        
+.MissIng{
+    color: #cf2530;
+}
+
+.MissIng .Ing{
+    background-color: #cf2530;
+}
+
+/* == Ingredients Header == */
+.IngHeader {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* == Ingredients List == */
+.IngList{
+    max-height: 45px;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+/* == Ingredients == */
+.Ing{
+    font-size: 14px;
+    margin: 5px;
+    padding: 7px;
+    border-radius: 10px;
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1050px) {
+    .AllRecipes{
+        width: 95%;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 700px) {
+    .Recipe{
+        flex-direction: column;
+    }
+
+    .RecipeImg{
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+
+    .RecipeDetails {
+        width: 100%;
+    }
+}
+
+/* === Scrollbar === */
+.IngList::-webkit-scrollbar {
+    background-color:	#E8E8E8;
+    border-radius: 10px;
+    width: 7px;
+}
+  
+.IngList::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+   
+.IngList::-webkit-scrollbar-thumb {
+    background-color: #38544d;
+    border-radius: 10px;
+}
